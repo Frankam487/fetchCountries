@@ -1,0 +1,17 @@
+.card {
+    background: rgb(229, 228, 228);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.753);
+    text-align: center;
+    width: 200px;
+    overflow: hidden;
+    align-items: center;
+    
+    .infos {
+        img {
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+.navigation {
+    ul{
+        display: flex;
+        list-style-type: none;
+        
+        li{
+            margin:  9px;
+            a{
+                text-decoration: none;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
