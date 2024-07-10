@@ -15,7 +15,7 @@ const Countres = () => {
     <div className="countries">
       <div className='range-content'>
         <div className="content">
-          <input type="range" defaultValue={rangevalue} onChange={(e) => setRangeValue(e.target.value)} name="" id="" max='250' min='0' />
+          <input type="range" defaultValue={rangevalue} onChange={(e) => setRangeValue(e.target.value)} name="" id="" max='250' min='10' />
         </div>
       </div>
       <h1>COUNTRIES</h1>
