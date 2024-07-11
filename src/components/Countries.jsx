@@ -30,7 +30,6 @@ const Countres = () => {
       <h1>COUNTRIES</h1>
 
       <ul>
-
         {data
           .slice(0, rangevalue)
           .map((country, index) => (
