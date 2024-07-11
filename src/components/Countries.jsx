@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
 const Countres = () => {
-  const [rangevalue, setRangeValue] = useState(0);
+  const [rangevalue, setRangeValue] = useState(36);
   const [data, setData] = useState([]);
+  const [selectidedRadio, setSelectidedRadio] = useState("")
   const radio = ["Africa", "Asia", "America", "Europe", "Oceania"];
   useEffect(() => {
     axios
@@ -20,7 +21,7 @@ const Countres = () => {
           {
             radio.map((continent) => (
               <li className="continents">
-                <input type="radio" name="continent" defaultValue="continent" id={continent} />
+                <input type="radio" onChange={(e) => setSelectidedRadio(e.target.id)} name="continent" defaultValue="continent" id={continent} />
                 <label htmlFor={continent}>{continent}</label>
               </li>
             ))
@@ -31,6 +32,8 @@ const Countres = () => {
 
       <ul>
         {data
+        .sort((a, b) => b.population - a.population)
+        .filter((country) => country.continents[0].includes(selectidedRadio))
           .slice(0, rangevalue)
           .map((country, index) => (
             <Card key={index} country={country} />
