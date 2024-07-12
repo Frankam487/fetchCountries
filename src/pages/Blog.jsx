@@ -51,7 +51,7 @@ const Blog = () => {
                         blogData
                             .sort((a, b) => b.date - a.date)
                             .map((article) => (
-                                <Article key={article.id} article={article} content={article.content}/>
+                                <Article key={article.id} article={article} content={article.content} getData={getData()}/>
                             ))
                     }
                 </ul>
