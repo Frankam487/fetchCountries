@@ -1,14 +1,24 @@
 .navigation {
-    ul{
+    ul {
         display: flex;
         list-style-type: none;
-        
-        li{
-            margin:  9px;
-            a{
+
+        li {
+            margin: 9px;
+
+            a {
+                transition: .2s ease-in-out;
+                margin-top: 20px;
+                color: $blue;
                 text-decoration: none;
                 font-size: 1.6rem;
+
             }
         }
+    }
+
+    .nav {
+        border-bottom: 4px solid $blue;
+        border-radius: 3px;
     }
 }
